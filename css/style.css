@@ -1,1 +1,98 @@
+:root {
+  --primary: hsl(0, 0%, 50%);
+  --white:  hsl(0, 0%, 100%);
+  --black: hsl(0, 0%, 7%);
+  --Yellow: hsl(47, 88%, 63%);
+  
+  --size: 1rem;
+}
 
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--Yellow);
+  min-height: 100svh;
+  font-size: 16px;
+}
+
+.container {
+  background-color: var(--white);
+  display: grid;
+  gap: var(--size);
+  width: 330px;
+  border-radius: 12px;
+  border: 2px solid var(--black);
+  box-shadow: 12px 12px 1px 3px var(--black);
+  padding-block: calc(var(--size) * 1.5);
+  padding-inline: calc(var(--size) * 1.5);
+}
+
+.hero {
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+button {
+  background-color: var(--Yellow);
+  border: none;
+  outline: none;
+  font-weight: 600;
+  border-radius: 6px;
+  padding-block: 0.8em;
+  padding-inline: 1.2em;
+}
+
+.published-date{
+  font-size: 0.8em;
+  font-weight: 500;
+  font-family: date;
+}
+
+article {
+  display: grid;
+  gap: var(--size);
+}
+
+h3 {
+  font-weight: 800;
+  transition: all 0.3s;
+}
+
+h3:active {
+  color: var(--Yellow);
+}
+
+@font-face {
+  font-family: paragraph;
+  src: url('../Assets/fonts/Figtree-VariableFont_wght.ttf');
+}
+
+p {
+  color: var(--primary);
+  font-size:0.8em;
+  line-height: 1.5;
+  font-family: paragraph;
+}
+
+figure {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+figure img {
+ width: 15%;
+}
+
+figcaption {
+  font-weight: 800;
+  font-size: 0.85em;
+}
